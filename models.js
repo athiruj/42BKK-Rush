@@ -14,3 +14,17 @@ export class Position{
         this.y = y;
     }
 }
+
+export class Axis{
+    static top = "top";
+    static bottom = "botton";
+    static left = "left";
+    static right = "right";
+    constructor(){}
+}
+
+class EleItem{
+    constructor(){
+        
+    }
+}

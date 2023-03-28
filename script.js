@@ -1,8 +1,17 @@
-import * as models from "./models.js";
+import { Size, Axis } from "./models.js";
+import { SetElement } from "./setElement.js";
+
 
 let colors = ["F45C3B", "FFC300", "009733"];
 let sectionClassname = [];
-let displaySize = new models.Size();
+let sectionClassname2 = [];
+const setEle = new SetElement(sectionClassname);
+const setEle2 = new SetElement(sectionClassname2);
+let displaySize = new Size();
+const btnA = document.getElementById("boxA");
+const btnB = document.getElementById("boxB");
+const bg = document.getElementById("bg");
+const bg2 = document.getElementById("bg2");
 
 window.addEventListener("resize", () => {
   displaySize.height = document.body.offsetHeight;
@@ -12,68 +21,37 @@ window.addEventListener("resize", () => {
 displaySize.height = document.body.offsetHeight;
 displaySize.width = document.body.offsetWidth;
 
-document.body.querySelectorAll("section").forEach(element => {
+bg.querySelectorAll("section").forEach((element) => {
   sectionClassname.push(element.id);
 });
+bg2.querySelectorAll("section").forEach((element) => {
+  sectionClassname2.push(element.id);
+});
 
-class SetElement{
-    constructor(element){
-        this.element =element;
-    }
 
-    rand(max){
-        return Math.floor(Math.random() * max)
-    }
+btnB.addEventListener("mouseover", () => {
+  bg2.style.opacity = "1"
+  bg2.classList.toggle("fade");
+  setEle2.setColor(colors);
+  setEle2.setPos(Axis.left, Axis.bottom);
+});
 
-    genColor(colors) {
-      let nColors = [];
-      this.element.forEach(() => {
-        nColors.push(colors[Math.floor(Math.random() * colors.length)]);
-      });
-      return nColors;
-    }
+btnB.addEventListener("mouseleave", () => {
+  bg2.style.opacity = "0"
 
-     genPos(areaX,areaY) {
-      let nPos = [];
-      this.element.forEach(() => {
-        nPos.push(
-          new models.Position(!areaX ? this.rand(displaySize.width) : 0, !areaY ? this.rand(displaySize.height) : 0)
-        );
-      });
-      return nPos;
-    }
- 
-    setPos(positionSet){
-        let x=0;
-        let e;
-        const nPos =  this.genPos()
-        this.element.forEach((cName)=> {
-            e = document.getElementById(cName)
-            e.style.transitionDuration = "3s"
-            e.style.transform = `translate(${nPos[x].x}px,${nPos[x].y}px)`
-            x += 1
-        })
-    }
+  bg2.classList.toggle("fade");
+  setEle2.resetPos(Axis.left, Axis.bottom);
+});
 
-    resetPos(){
-        this.setPos
-    }
+btnA.addEventListener("mouseover", () => {
+  bg.style.opacity = "1"
+  bg.classList.toggle("fade");
+  setEle.setColor(colors);
+  setEle.setPos(Axis.right, Axis.bottom);
+});
 
-    setColor(colors){
-        let x=0;
-        let e;
-        const nColor = this.genColor(colors)
-        this.element.forEach((cName)=> {
-            e = document.getElementById(cName)
-            e.style.backgroundColor = `#${nColor[x]}`
-
-            x += 1
-        })
-    }
-
-}
-
-// console.log(genPos(sectionClassname));
-const btn = document.getElementById("boxA")
-btn.addEventListener("mouseover",()=> new SetElement(sectionClassname).setColor(colors))
-btn.addEventListener("mouseover",()=> new SetElement(sectionClassname).setPos())
+btnA.addEventListener("mouseleave", () => {
+  bg.style.opacity = "0"
+  bg.classList.toggle("fade");
+  setEle.resetPos(Axis.right, Axis.bottom);
+});

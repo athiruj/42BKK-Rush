@@ -3,35 +3,50 @@
   padding: 0;
 }
  
-html,
-body,
-.body,
-.bg {
+ html,
+body, 
+.box-index{
     position: absolute;
     height: 100%;
     width: 100%;
 }
-/* html,
-.body {
 
+.bigIndex{
+    z-index: 2;
+}
+
+/* .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } */
 
-.bg{
-    position: relative;
-    z-index: -1;
+.bg,.bg2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
-#boxA,
-#boxB {
-    height: 100px;
-    width: 100px;
-    margin: 10px;
-    background-color: aqua;
-}
 
-section {
+
+
+.bg section ,.bg2 section {
     position:absolute;
+    bottom: 0;
+    right: 0;
     background-color: aqua;
     height: 40px;
     width: 40px;
+    transform-origin: center;
+    transition-duration: 1s;
+}
+
+.bg2 section{
+  left: 0;
+}
+
+.bg ,.bg2{
+    opacity: 0;
+    transition: 1s ease-in-out;
+    z-index: 1;
 }
