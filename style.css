@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+html,
+body,
+.body,
+.bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+/* html,
+.body {
+
+} */
+
+.bg{
+    position: relative;
+    z-index: -1;
+}
+
+#boxA,
+#boxB {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: aqua;
+}
+
+section {
+    position:absolute;
+    background-color: aqua;
+    height: 40px;
+    width: 40px;
+}
