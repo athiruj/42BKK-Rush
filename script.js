@@ -33,26 +33,30 @@ class SetElement{
       return nColors;
     }
 
-     genPos() {
+     genPos(areaX,areaY) {
       let nPos = [];
       this.element.forEach(() => {
         nPos.push(
-          new models.Position(this.rand(displaySize.width), this.rand(displaySize.height))
+          new models.Position(!areaX ? this.rand(displaySize.width) : 0, !areaY ? this.rand(displaySize.height) : 0)
         );
       });
       return nPos;
     }
  
-    setPos(){
+    setPos(positionSet){
         let x=0;
         let e;
-        const nPos = this.genPos()
+        const nPos =  this.genPos()
         this.element.forEach((cName)=> {
             e = document.getElementById(cName)
             e.style.transitionDuration = "3s"
             e.style.transform = `translate(${nPos[x].x}px,${nPos[x].y}px)`
             x += 1
         })
+    }
+
+    resetPos(){
+        this.setPos
     }
 
     setColor(colors){
