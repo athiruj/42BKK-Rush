@@ -1,0 +1,27 @@
+:root {
+  --primaryOrange: #f45c3b;
+  --primaryYellow: #ffc300;
+  --primaryGreen: #009733;
+  --supGray: #bcbcbc;
+  --disGray: #f0f0f0;
+  --actGray: #d0d0d0;
+}
+
+.transition > div {
+  position: absolute;
+  /* transition: 400ms ease-in-out; */
+}
+
+#orange {
+  background-color: var(--primaryOrange);
+
+  z-index: 3;
+}
+#green {
+  background-color: var(--primaryGreen);
+  z-index: 4;
+}
+#yellow {
+  z-index: 5;
+  background-color: var(--primaryYellow);
+}
