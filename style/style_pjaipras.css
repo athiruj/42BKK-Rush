@@ -59,13 +59,13 @@ svg {
 
 .back {
   text-decoration: none;
-  font-size: 1.389vw;
+  font-size: 1.3vw;
   color: white;
 }
 
-.arrow{
-  height: 3vw;
-  width: 3vw;
+.arrow {
+  height: 2vw;
+  width: 2vw;
 }
 
 .name {
@@ -77,8 +77,8 @@ svg {
 .img {
   margin: 0.972vw 0.972vw 0 0.972vw;
   box-sizing: border-box;
-  height: 25.528vw;
-  max-width: 25.528vw;
+  height: 20.528vw;
+  max-width: 20.528vw;
   border-radius: 28px;
   border: 0.139vw #fff solid;
   object-fit: cover;
@@ -91,7 +91,7 @@ svg {
   margin: 0.972vw;
   padding: 1.272vw;
   width: 40vw;
-  height: 25.528vw;
+  height: 20.528vw;
   background-color: #fff;
   color: #012f4f;
   font-weight: 300;
@@ -112,8 +112,8 @@ svg {
   justify-content: space-around;
 }
 
-#skills #h{
-  font-weight: 400
+#skills #h {
+  font-weight: 400;
 }
 #contacts {
   padding: 0;
@@ -152,10 +152,10 @@ svg {
 
 .nav > section {
   box-sizing: border-box;
-  height: 75px;
+  height: 5vw;
   margin: 10px 50px;
   padding: 10px 10px;
-  font-size: 1.6vw;
+  font-size: 1.34vw;
   color: #fff;
 }
 
@@ -165,8 +165,8 @@ svg {
 }
 
 .nav > section > img {
-  height: 3vw;
-  width: 3vw;
+  height: 2.2vw;
+  width: 2.2vw;
   margin: 10px;
 }
 .nav > section > p {
@@ -196,8 +196,7 @@ svg {
 }
 
 @media only screen and (max-width: 700px) {
-
-  .samiBody{
+  .samiBody {
     display: none;
   }
 }

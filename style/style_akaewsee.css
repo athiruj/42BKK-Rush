@@ -58,13 +58,13 @@ svg {
 
 .back {
   text-decoration: none;
-  font-size: 1.389vw;
+  font-size: 1.3vw;
   color: black;
 }
 
 .arrow{
-  height: 3vw;
-  width: 3vw;
+  height: 2vw;
+  width: 2vw;
 }
 
 .arrow1 {
@@ -80,8 +80,8 @@ svg {
 .img {
   margin: 0.972vw 0.972vw 0 0.972vw;
   box-sizing: border-box;
-  height: 25.528vw;
-  max-width: 25.528vw;
+  height: 20.528vw;
+  max-width: 20.528vw;
   border-radius: 28px;
   border: 0.139vw #fff solid;
   object-fit: cover;
@@ -94,9 +94,9 @@ svg {
   margin: 0.972vw;
   padding: 1.272vw;
   width: 40vw;
-  height: 25.528vw;
+  height: 20.528vw;
   background-color: #f4f4f4;
-  color: #012f4f;
+  color: #000000;
   font-weight: 300;
 }
 
@@ -111,9 +111,10 @@ svg {
 }
 
 #skills {
-  font-size: 1.389vw;
+  font-size: 1.2vw;
   justify-content: space-around;
 }
+
 #skills #h{
   font-weight: 400
 }
@@ -157,10 +158,10 @@ svg {
 .nav > section {
   box-sizing: border-box;
   font-weight: 500;
-  height: 75px;
+  height: 4vw;
   margin: 10px 50px;
   padding: 10px 10px;
-  font-size: 1.6vw;
+  font-size: 1.34vw;
   color: #000;
 }
 
@@ -170,8 +171,8 @@ svg {
 }
 
 .nav > section > svg {
-  height: 3vw;
-  width: 3vw;
+  height: 2.2vw;
+  width: 2.2vw;
   margin: 10px;
 }
 

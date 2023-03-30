@@ -2,14 +2,18 @@ import { Axis, Size, Position } from "./models.js";
 
 export class SetElement {
   constructor(element) {
+
     this.element = element;
+
     this.displaySize = new Size();
     this.displaySize.height = window.innerHeight;
     this.displaySize.width = window.innerWidth;
+    
     window.addEventListener("resize", () => {
       this.displaySize.height = window.innerHeight;
       this.displaySize.width = window.innerWidth;
     });
+    
   }
 
   rand(min, max) {
@@ -58,6 +62,7 @@ export class SetElement {
     let e;
     let x;
     let y;
+
     switch (relativeX) {
       case Axis.right:
         x = "-";
@@ -75,6 +80,7 @@ export class SetElement {
     const nPos = !positionSet ? this.genPos() : positionSet;
     const nRot = this.genRot();
     const nSize = this.genSize();
+
     this.element.forEach(cName => {
       e = document.getElementById(cName);
       e.style.transform = `translate(${x}${nPos[i].x}px,${y}${nPos[i].y}px)`;

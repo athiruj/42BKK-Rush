@@ -71,13 +71,13 @@ div.content section {
 
 .name {
   padding-top: 1.25vw;
-  font-size: 1.6vw;
+  font-size: 1.4vw;
 }
 
 .img {
   box-sizing: border-box;
-  height: 16.528vw;
-  width: 16.528vw;
+  height: 17.528vw;
+  width: 17.528vw;
   border: 0.139vw var(--disGray) solid;
   object-fit: cover;
 }
