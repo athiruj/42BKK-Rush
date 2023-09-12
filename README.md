@@ -1,1 +1,1 @@
-# [42BKK-Rush-Project](https://athiruj.github.io/42BKK-Rush/)
+# [athiruj.github.io/42BKK-Rush](https://athiruj.github.io/42BKK-Rush/)
